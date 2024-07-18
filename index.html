@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>open library</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-green-100" >
+  <div class="m-auto ">
+    <button id="myButton" class="w-100px border-2 bg-blue-500 m-auto absolute top-0 right-0 p-4  text-white">About us</button>
+    <button class="w-100px border-2 bg-blue-500 m-auto flex p-4  text-white">Home</button>
+    <button class="w-100px border-2 bg-blue-500 m-auto absolute top-0 left-0 p-4 text-white">contact us</button> 
+  </div>
+ 
+  <section >
+   
+    <h1 class="font-black text-3xl mb-4">Open Library</h1>
+    <div class="flex w-full max-w-md">
+      <input id="input" class="border-solid border-2 border-sky-500 pl-2  flex-grow mr-2" placeholder="search for a book">
+      <button onclick="getbooks()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-progress">getbooks</button><br>
+      <div id="output" class="mt-4"></div> 
+      <button onclick="mybooks()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex px-4 ms-8">my books</button>
+      <div id="outputbooks"></div>
+     
+    </div>
+   
+    
+  </section>
+ 
+
+
+
+  <script src="/index.js"></script>
+</body>
+</html>
+
