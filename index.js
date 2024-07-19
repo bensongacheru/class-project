@@ -3,7 +3,7 @@ function getbooks(){
   fetch("https://openlibrary.org/search.json?q="+document.getElementById("input").value)
   .then(a=> a.json())
   .then(response=>{
-    for(var i=0;i<10;i++){
+    for(let i=0;i<10;i++){
       document.getElementById("output").innerHTML+="<h1>"+ response.docs[i].title+"</h1>"+response.docs[i].author_name[0]+"<br><img src='http://covers.openlibrary.org/b/isbn/"+response.docs[i].isbn[0]+"-M.jpg'><br>";
 
       const books = bookData.docs;
@@ -22,7 +22,7 @@ function mybooks() {
   .then(response)
 }
 
-const button = document.getElementById("myButton");
+const button =document.getElementById("mybutton");
 
 button.addEventListener("click", function() {
   alert("The button was clicked!");
@@ -43,3 +43,8 @@ searchTermInput.addEventListener("keypress", function(event) {
     searchBooks(searchTerm);
   }
 });
+
+const search = document.getElementById("search")
+search.addEventListener('click' ,function(){
+  this.style.backgroundColor = "red";
+})
